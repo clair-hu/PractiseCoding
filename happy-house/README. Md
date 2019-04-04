@@ -1,0 +1,4 @@
+First set up tensorflow environment. 
+Secons install keras in anaconda 
+If no numoy available, install numpy in anaconda. 
+Try run the load_weight.py script. 
