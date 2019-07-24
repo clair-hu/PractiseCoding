@@ -1,0 +1,1 @@
+Auto object tracking without human manually selecting bounding boxes
