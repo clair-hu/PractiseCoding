@@ -1,4 +1,25 @@
+## Salient Object Detection (Fixation Prediction)
 
+* Salient → most noticeable or important. (https://towardsdatascience.com/cvpr-2014-paper-summary-the-secrets-of-salient-object-segmentation-9c777babdc5)
+
+* salient object detection is a term used to segment the most important objects in the image.
+* 1) detecting the most salient object and 2) segmenting the accurate
+region of that object.
+
+* Saliency, defined as
+uniqueness in terms of global regional contrast,
+In addition to color uniqueness, distinctiveness
+of complementary cues such as texture [175] and
+structure [179] is also considered for salient object
+detection.
+
+* salient object subitizing
+
+* **Paper** [Revisiting Salient Object Detection:Simultaneous Detection, Ranking, and Subitizing of Multiple Salient Objects](chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2523.pdf?source=post_page---------------------------)
+
+* [SOD with KCF](chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://kuscholarworks.ku.edu/bitstream/handle/1808/24144/Nandi_ku_0099M_15079_DATA_1.pdf?sequence=1)
+
+https://towardsdatascience.com/cvpr-paper-summary-revisiting-salient-object-detection-simultaneous-detection-ranking-and-b759a9226d63
 
 -------------------------
 ## Auto object tracking without manually selecting bounding boxes
