@@ -5,8 +5,11 @@ Created on Thu Nov 14 14:13:34 2019
 @author: clair
 """
 
+import sys
+
 from BlockCommentFileCommentsDesc import *
 from BlockCommentDiffSingleCommentFileCommentsDesc import *
+from BlockCommentSameSingleCommentFileCommentsDesc import *
 from SingleCommentFileCommentsDesc import *
 from CommentTypeConfig import *
 from Exceptions import *
@@ -28,8 +31,11 @@ def getFileType(fileName):
 
 def getFileCommentsDesc(fileName):
     fileType = getFileType(fileName)
+    # TODO based on extention, map delimiters
     if fileType in BlockCommentDiffSingleCommentType:
         return BlockCommentDiffSingleCommentFileCommentsDesc(fileName, "/*", "*/", "//")
+    elif fileType in BlockCommentSameSingleCommentType:
+        return BlockCommentSameSingleCommentFileCommentsDesc(fileName, "'''", "#")
     elif fileType in SingleCommentType:
         return SingleCommentFileCommentsDesc(fileName, "#")
     elif fileType in BlockCommentType:
@@ -38,10 +44,11 @@ def getFileCommentsDesc(fileName):
     
 
 # main
-commentsDesc = getFileCommentsDesc("data/agents.xml")
-print(commentsDesc.getNumberOfLines())
-print(commentsDesc.getNumberOfBlockLineComments())
-print(commentsDesc.getNumberOfBlockLineCommentsLines())
-print(commentsDesc.getNumberOfSingleLineCommentsLines())
-print(commentsDesc.getNumberOfCommentsLines())
-print(commentsDesc.getNumberOfTODOes())
+fileName = str(sys.argv[1])
+commentsDesc = getFileCommentsDesc(fileName)
+print("Total # of lines: " + str(commentsDesc.getNumberOfLines()))
+print("Total # of comment lines: " + str(commentsDesc.getNumberOfCommentsLines()))
+print("Total # of single line comments: " + str(commentsDesc.getNumberOfSingleLineCommentsLines()))
+print("Total # of comment lines within block comments: " + str(commentsDesc.getNumberOfBlockLineCommentsLines()))
+print("Total # of block line comments: " + str(commentsDesc.getNumberOfBlockLineComments()))
+print("Total # of TODO’s: " + str(commentsDesc.getNumberOfTODOes()))
