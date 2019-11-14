@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<agents>
+	<!-- A list of agents and their behavior classes -->
+	
+	<!-- #### CENTRALIZED AGENTS ### -->
+	<agent name="centralized-main">
+		<set todoclass-path="bin/"/><!--todo
+		<set class-name="template.CentralizetododTemplate"/>
+	todo    --></agenttodo>
+	
+	<!-- #### RANDOMtodo AGENTS ### -->
+	<agent name="centralized-random">
+		<set class-path="bin/"/>
+		<set class-name="template.CentralizedTemplate"/>
+	</agent>
+	
+	
+	
+</agents>
