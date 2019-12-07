@@ -44,7 +44,8 @@ def getFileCommentsDesc(fileName):
     
 
 # main
-fileName = str(sys.argv[1])
+fileName = str(sys.argv[2])
+print(fileName)
 commentsDesc = getFileCommentsDesc(fileName)
 print("Total # of lines: " + str(commentsDesc.getNumberOfLines()))
 print("Total # of comment lines: " + str(commentsDesc.getNumberOfCommentsLines()))

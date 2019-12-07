@@ -96,3 +96,13 @@ class BlockCommentDiffSingleCommentFileCommentsDesc(FileCommentsDesc):
                 endDelimiterIndex = line.find(self.endDelimiterBlock)
                 if todoIndex > beginDelimiterIndex and todoIndex < endDelimiterIndex:
                     self.TODOes.append(line[todoIndex:])
+                    
+                    
+commentsDesc = BlockCommentDiffSingleCommentFileCommentsDesc("data/PlaneFuelTest.java", "/*", "*/", "//")
+#commentsDesc = getFileCommentsDesc(fileName)
+print("Total # of lines: " + str(commentsDesc.getNumberOfLines()))
+print("Total # of comment lines: " + str(commentsDesc.getNumberOfCommentsLines()))
+print("Total # of single line comments: " + str(commentsDesc.getNumberOfSingleLineCommentsLines()))
+print("Total # of comment lines within block comments: " + str(commentsDesc.getNumberOfBlockLineCommentsLines()))
+print("Total # of block line comments: " + str(commentsDesc.getNumberOfBlockLineComments()))
+print("Total # of TODO’s: " + str(commentsDesc.getNumberOfTODOes()))
